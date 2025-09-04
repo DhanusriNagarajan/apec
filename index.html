@@ -1,110 +1,127 @@
-Absolutely, Dhanusri! Here's your complete and polished single-file login page with all the enhancements I mentioned earlier—clean design, accessibility, and a touch of animation for flair:
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Secure login page for user authentication." />
-  <title>Login Page</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Login</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background-color: #f6f8fa;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
     }
-
     .login-container {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      width: 320px;
       text-align: center;
-      width: 100%;
-      max-width: 320px;
-      animation: fadeIn 0.5s ease-in-out;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .login-container img {
-      width: 100px;
+    .logo {
       margin-bottom: 20px;
     }
-
-    .login-container label {
-      display: block;
+    .logo img {
+      width: 60px;
+    }
+    .login-box {
+      background: #fff;
+      padding: 24px;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
       text-align: left;
-      margin: 10px 0 5px;
-      font-weight: bold;
     }
-
-    .login-container input {
-      width: 100%;
-      padding: 10px;
-      font-size: 18px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
+    .login-box h1 {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 16px;
+      text-align: center;
     }
-
-    .login-container button {
-      width: 100%;
-      padding: 10px;
-      background-color: #4CAF50;
-      color: white;
-      font-size: 18px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-
-    .login-container button:hover {
-      background-color: #45a049;
-    }
-
-    .login-container a {
+    .form-label {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 8px 0 4px;
       display: block;
-      margin-top: 10px;
-      color: #4CAF50;
-      text-decoration: none;
-      font-size: 14px;
     }
-
-    #error-message {
-      color: red;
-      margin-top: 10px;
+    .form-input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
       font-size: 14px;
+      margin-bottom: 12px;
+    }
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background: #2da44e;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #2c974b;
+    }
+    .forgot {
+      font-size: 12px;
+      text-align: right;
+      margin-bottom: 12px;
+    }
+    .forgot a {
+      color: #0969da;
+      text-decoration: none;
+    }
+    .forgot a:hover {
+      text-decoration: underline;
+    }
+    .signup-box {
+      margin-top: 16px;
+      font-size: 14px;
+      padding: 16px;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      background: #f6f8fa;
+    }
+    .signup-box a {
+      color: #0969da;
+      text-decoration: none;
+    }
+    .signup-box a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="login-container">
-    <img src="image.png" alt="Logo" />
-    <h2>Login</h2>
-    <form action="/login" method="POST" role="form">
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" placeholder="Enter username" required autocomplete="username" aria-label="Username" />
+    <div class="logo">
+      <!-- 🔴 Replace the filename below with your own logo if different -->
+      <img src="Screenshot 2025-09-04 120543.png" alt="My Logo">
+    </div>
+    <div class="login-box">
+      <h1>Sign in to GitHub</h1>
+      <form action="#" method="post">
+        <label class="form-label" for="username">Username or email address</label>
+        <input class="form-input" type="text" id="username" name="username" required>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Enter password" required autocomplete="current-password" aria-label="Password" />
+        <div class="forgot">
+          <a href="#">Forgot password?</a>
+        </div>
 
-      <button type="submit">Login</button>
-    </form>
-    <a href="/forgot-password">Forgot Password?</a>
-    <div id="error-message"></div>
+        <label class="form-label" for="password">Password</label>
+        <input class="form-input" type="password" id="password" name="password" required>
+
+        <button type="submit" class="btn">Sign in</button>
+      </form>
+    </div>
+    <div class="signup-box">
+      New to GitHub? <a href="#">Create an account</a>
+    </div>
   </div>
 </body>
 </html>
 
-
-Let me know if you'd like to add JavaScript validation, connect it to a backend, or turn it into a React component. I’ve got your back!
+
 
